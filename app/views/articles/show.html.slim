@@ -1,0 +1,15 @@
+h1 Articles#show
+p Find me in app/views/articles/show.html.slim
+
+
+p Title:
+  = #{@article.title}
+ 
+p Text:
+  = #{@article.text}
+
+= link_to 'Edit', edit_article_path(@article)
+br
+= link_to 'Back', articles_path
+
+
