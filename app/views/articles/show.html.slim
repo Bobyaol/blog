@@ -9,28 +9,11 @@ p Text:
   = #{@article.text}
 
 
-h2 Comments
-
-- @article.comments.each do |comment|
-  p
-  strong Commenter:
-  = comment.commenter
-  p
-  strong Comment:
-  = comment.body
+h2 Comments:
+= render @article.comments
 
 h2 Add a comment:
-= form_for([@article, @article.comments.build]) do |f|
-  p
-  = f.label :commenter
-  br
-  = f.text_field :commenter
-  p
-  = f.label :body
-  br
-  = f.text_area :body
-  p
-  = f.submit
+= render 'comments/form'
 
 
 
