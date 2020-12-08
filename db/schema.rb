@@ -28,4 +28,5 @@ ActiveRecord::Schema.define(version: 2020_12_05_090607) do
     t.index ["article_id"], name: "index_comments_on_article_id"
   end
 
+  add_foreign_key "comments", "articles"
 end
